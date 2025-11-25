@@ -1,0 +1,30 @@
+<div class="scroll-container">
+  <!-- Navigation buttons -->
+  <nav class="scroll-nav">
+    <button (click)="scrollToSection(0)">Section 1</button>
+    <button (click)="scrollToSection(1)">Section 2</button>
+    <button (click)="scrollToSection(2)">Section 3</button>
+  </nav>
+
+  <!-- Sections -->
+  <section #sections class="snap-section section1">
+    <div class="content" [class.visible]="visibleSections[0]">
+      <h1>Section 1</h1>
+      <p>Welcome to the first section!</p>
+    </div>
+  </section>
+
+  <section #sections class="snap-section section2">
+    <div class="content" [class.visible]="visibleSections[1]">
+      <h1>Section 2</h1>
+      <p>Here’s some more content.</p>
+    </div>
+  </section>
+
+  <section #sections class="snap-section section3">
+    <div class="content" [class.visible]="visibleSections[2]">
+      <h1>Section 3</h1>
+      <p>Even more exciting content here!</p>
+    </div>
+  </section>
+</div>
