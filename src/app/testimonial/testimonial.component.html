@@ -1,0 +1,37 @@
+<div class="testimonial-wrapper" >
+  <div class="testimonial-container" [style.background]="testimonials[currentIndex].bgColor">
+
+    <div class="testimonial-content" [class.active]="animate">
+
+      <div class="testimonial-left">
+        <div class="img-wrapper">
+          <img [src]="testimonials[currentIndex].image" (load)="onImageLoad()" />
+        </div>
+      </div>
+
+      <div class="testimonial-right">
+        <span class="quote-icon">“</span>
+
+        <p class="testimonial-text">{{ testimonials[currentIndex].text }}</p>
+
+        <p class="author">
+          <strong>{{ testimonials[currentIndex].author }}</strong><br />
+          <span class="role">{{ testimonials[currentIndex].role }}</span>
+        </p>
+
+        <div class="dots">
+          <div class="dot-indicator" [style.left.px]="currentIndex * dotSpacing"></div>
+
+          <span
+            class="dot"
+            *ngFor="let t of testimonials; let i = index"
+            (click)="setIndex(i)"
+          ></span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

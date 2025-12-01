@@ -1,0 +1,102 @@
+.wrapper {
+  background: #ffffff;
+  padding: 60px 0;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  min-height: 300px;
+  width: 100%;
+  background: #f4f0fb;
+  padding: 40px 5vw;
+  align-self: flex-end;
+  position: relative;
+}
+
+.title {
+  float: right;                /* keep the title on the right, like you have now */
+  width: fit-content;          /* shrink to text width so position doesn’t change */
+  font-size: 70px;
+  font-weight: 700;
+  color: #4b1e83;
+  margin: 20px 0 0 0;
+  line-height: 1;
+  display: flex;               /* control each word as a separate line */
+  flex-direction: column;
+  align-items: flex-start;     /* both words start at the exact same x position */
+}
+
+.title span {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+
+.cards-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -15%;
+  position: relative;
+  z-index: 10;
+  margin-left: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  width: clamp(220px, 30vw, 300px);
+  aspect-ratio: 1/1.5;
+  background: #5b2ca7;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/pexels-fauxels-3183132.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(80, 0, 140, 0.5);
+}
+
+.content {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  color: white;
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.heading {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
